@@ -47,7 +47,7 @@ describe GnipGnop::Entry do
   end
 
   it "should parse the entry's object's link's href" do
-    @entry.activity_object.link.href.must_equal "http://twitter.com/greeneyedtengu/statuses/180761363340197888"
+    @entry.activity_object.links[0].href.must_equal "http://twitter.com/greeneyedtengu/statuses/180761363340197888"
   end
 
   it "should parse the entry's object's id" do
