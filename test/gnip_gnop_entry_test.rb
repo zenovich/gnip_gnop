@@ -34,6 +34,10 @@ describe GnipGnop::Entry do
     @entry.source.title.must_equal "Twitter - Keyword - Notices - apartments"
   end
 
+  it "should parse the entry's source's rule" do
+    @entry.source.rule.must_equal "some rule"
+  end
+
   it "should parse the entry's provider" do
     @entry.service_provider.name.must_equal "Twitter"
   end

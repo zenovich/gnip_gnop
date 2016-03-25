@@ -7,5 +7,6 @@ module GnipGnop
     element :title, String
     element :updated, DateTime
     has_one :link, Link
+    element :rule, String, :namespace => "gnip"
   end
 end
