@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.name          = "gnip_gnop"
   gem.require_paths = ["lib"]
 
-  gem.add_dependency 'happymapper'
+  gem.add_dependency "nokogiri-happymapper",  "~> 0.5.9"
 
   gem.version       = GnipGnop::VERSION
 end
