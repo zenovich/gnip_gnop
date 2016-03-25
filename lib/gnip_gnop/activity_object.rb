@@ -7,8 +7,8 @@ module GnipGnop
     namespace "activity"
 
     element :object_type, String, :tag => 'object-type'
-    element :id, String, :namespace => :default
-    element :content, String, :attributes => { :type => String }, :namespace => :default
-    has_one :link, Link
+    element :id, String, :namespace => DEFAULT_NS
+    element :content, ActivityObjectContent, :namespace => DEFAULT_NS
+    has_one :link, Link, :namespace => DEFAULT_NS
   end
 end

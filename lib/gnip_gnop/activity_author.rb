@@ -12,7 +12,7 @@ module GnipGnop
     namespace "activity"
 
     element :object_type, String, :tag => 'object-type'
-    has_many :links, Link
-    element :id, String, :namespace => :default
+    has_many :links, Link, :namespace => DEFAULT_NS
+    element :id, String, :namespace => DEFAULT_NS
   end
 end

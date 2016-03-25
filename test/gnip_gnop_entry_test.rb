@@ -15,7 +15,7 @@ describe GnipGnop::Entry do
   end
 
   it "should parse the summary's text" do
-    @entry.summary.must_equal "@redheadphotog Huh. Good luck hon. You know... Two apartments in our building will be vacant soon... D101 and D103..."
+    @entry.summary.text.must_equal "@redheadphotog Huh. Good luck hon. You know... Two apartments in our building will be vacant soon... D101 and D103..."
   end
 
   it "should parse the summary's type attribute" do
@@ -97,5 +97,17 @@ describe GnipGnop::Entry do
   it "should parse multiple matching rules" do
     @entry = GnipGnop::Entry.parse(File.read(File.expand_path('../fixtures/entry_with_rules.xml', __FILE__)))
     @entry.matching_rules.size.must_equal 2
+  end
+
+  it "should render xml properly" do
+    result_xml = Nokogiri::XML(GnipGnop::Entry.parse(@entry.to_xml).to_xml)
+    expected_xml = Nokogiri::XML(xml)
+    expected_namespaces = expected_xml.collect_namespaces
+    result_xml.collect_namespaces.must_equal expected_namespaces
+
+    expected_xml.remove_namespaces!
+    result_xml.remove_namespaces!
+
+    assert_xml_equal(expected_xml.to_xml, result_xml.to_xml)
   end
 end

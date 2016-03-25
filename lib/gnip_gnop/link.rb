@@ -6,6 +6,7 @@ module GnipGnop
 
     attribute :rel, String
     attribute :type, String
+    attribute :length, String
     attribute :href, String
   end
 end

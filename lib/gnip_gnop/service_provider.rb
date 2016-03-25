@@ -5,8 +5,8 @@ module GnipGnop
     tag 'provider'
     namespace "service"
 
-    element :name, String, :namespace => :default
-    element :uri, String, :namespace => :default
-    element :icon, String, :namespace => :default
+    element :name, String, :namespace => DEFAULT_NS
+    element :uri, String, :namespace => DEFAULT_NS
+    element :icon, String, :namespace => DEFAULT_NS
   end
 end
