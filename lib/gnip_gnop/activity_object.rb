@@ -4,11 +4,11 @@ module GnipGnop
 
     tag 'object'
 
-    namespace 'http://activitystrea.ms/spec/1.0/'
+    namespace "activity"
 
     element :object_type, String, :tag => 'object-type'
-    element :id, String, :namespace => 'http://www.w3.org/2005/Atom'
-    element :content, String, :attributes => { :type => String }, :namespace => 'http://www.w3.org/2005/Atom'
+    element :id, String, :namespace => :default
+    element :content, String, :attributes => { :type => String }, :namespace => :default
     has_one :link, Link
   end
 end

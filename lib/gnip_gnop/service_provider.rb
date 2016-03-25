@@ -3,11 +3,10 @@ module GnipGnop
     include HappyMapper
 
     tag 'provider'
+    namespace "service"
 
-    namespace 'http://activitystrea.ms/service-provider'
-
-    element :name, String, :namespace => 'http://www.w3.org/2005/Atom'
-    element :uri, String, :namespace => 'http://www.w3.org/2005/Atom'
-    element :icon, String, :namespace => 'http://www.w3.org/2005/Atom'
+    element :name, String, :namespace => :default
+    element :uri, String, :namespace => :default
+    element :icon, String, :namespace => :default
   end
 end

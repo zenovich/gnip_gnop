@@ -4,7 +4,7 @@ module GnipGnop
 
     tag 'matching_rule'
 
-    namespace 'http://www.gnip.com/schemas/2010'
+    namespace "gnip"
 
     attribute :rel, String
     content :rule
