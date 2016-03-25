@@ -50,6 +50,11 @@ describe GnipGnop::Entry do
     @entry.activity_object.links[0].href.must_equal "http://twitter.com/greeneyedtengu/statuses/180761363340197888"
   end
 
+  it "should parse the entry's object's categories's term" do
+    @entry.activity_object.categories[0].term.must_equal "cat"
+    @entry.activity_object.categories[1].term.must_equal "dog"
+  end
+
   it "should parse the entry's object's id" do
     @entry.activity_object.id.must_equal "object:tag:search.twitter.com,2005:180761363340197888"
   end
