@@ -59,6 +59,10 @@ describe GnipGnop::Entry do
     @entry.activity_object.id.must_equal "object:tag:search.twitter.com,2005:180761363340197888"
   end
 
+  it "should parse the entry's object's gnip:statistics" do
+    @entry.activity_object.gnip_statistics.favouritesCount.must_equal 10
+  end
+
   it "should parse the entry's object's georss:point" do
     @entry.activity_object.georss_point.must_equal "37.4934592 -120.8473432"
   end
