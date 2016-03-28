@@ -3,7 +3,7 @@ module GnipGnop
     class GnipStatistics
       include HappyMapper
 
-      attribute :favouritesCount, Integer
+      attribute :favoriteCount, Integer
     end
   end
 end

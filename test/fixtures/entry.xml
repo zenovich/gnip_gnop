@@ -28,7 +28,7 @@
     <link rel="preview" type="text/html" href="http://twitter.com/greeneyedtengu/statuses/sdfsdfsd"/>
     <category term="cat"/>
     <category term="dog"/>
-    <gnip:statistics favouritesCount="10"/>
+    <gnip:statistics favoriteCount="10"/>
     <georss:point>37.4934592 -120.8473432</georss:point>
   </activity:object>
   <author>

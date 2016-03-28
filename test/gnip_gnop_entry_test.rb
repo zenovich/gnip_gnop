@@ -60,7 +60,7 @@ describe GnipGnop::Entry do
   end
 
   it "should parse the entry's object's gnip:statistics" do
-    @entry.activity_object.gnip_statistics.favouritesCount.must_equal 10
+    @entry.activity_object.gnip_statistics.favoriteCount.must_equal 10
   end
 
   it "should parse the entry's object's georss:point" do
