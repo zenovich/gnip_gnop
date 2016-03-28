@@ -9,6 +9,9 @@ module GnipGnop
     register_namespace("activity", "http://activitystrea.ms/spec/1.0/")
     register_namespace("service", "http://activitystrea.ms/service-provider")
     register_namespace("gnip", "http://www.gnip.com/schemas/2010")
+    register_namespace("thr", "http://purl.org/syndication/thread/1.0")
+    register_namespace("georss", "http://www.georss.org/georss")
+    register_namespace("atommedia", "http://purl.org/syndication/atommedia")
 
     element :id, String
     element :published, DateTime, :on_save => :format_date_time

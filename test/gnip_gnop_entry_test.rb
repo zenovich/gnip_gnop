@@ -107,7 +107,15 @@ describe GnipGnop::Entry do
   it "should render xml properly" do
     result_xml = Nokogiri::XML(GnipGnop::Entry.parse(@entry.to_xml).to_xml)
     expected_xml = Nokogiri::XML(xml)
-    expected_namespaces = expected_xml.collect_namespaces
+    expected_namespaces = {
+                            "xmlns:atommedia" => "http://purl.org/syndication/atommedia",
+                            "xmlns:georss"    => "http://www.georss.org/georss",
+                            "xmlns:thr"       => "http://purl.org/syndication/thread/1.0",
+                            "xmlns:gnip"      => "http://www.gnip.com/schemas/2010",
+                            "xmlns:service"   => "http://activitystrea.ms/service-provider",
+                            "xmlns:activity"  => "http://activitystrea.ms/spec/1.0/",
+                            "xmlns"           => "http://www.w3.org/2005/Atom"
+                          }
     result_xml.collect_namespaces.must_equal expected_namespaces
 
     expected_xml.remove_namespaces!
