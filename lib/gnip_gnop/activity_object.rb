@@ -11,5 +11,6 @@ module GnipGnop
     element :content, ActivityObjectContent, :namespace => DEFAULT_NS
     has_many :links, Link, :tag => 'link', :namespace => DEFAULT_NS
     has_many :categories, Category, :tag => 'category', :namespace => DEFAULT_NS
+    element :georss_point, String, :tag => 'point', :namespace => 'georss'
   end
 end

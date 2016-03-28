@@ -1,4 +1,4 @@
-<entry xmlns:gnip="http://www.gnip.com/schemas/2010" xmlns="http://www.w3.org/2005/Atom">
+<entry xmlns:georss="http://www.georss.org/georss" xmlns:gnip="http://www.gnip.com/schemas/2010" xmlns="http://www.w3.org/2005/Atom">
   <id>tag:search.twitter.com,2005:180761363340197888</id>
   <published>2012-03-16T21:04:02Z</published>
   <updated>2012-03-16T21:04:02Z</updated>
@@ -28,6 +28,7 @@
     <link rel="preview" type="text/html" href="http://twitter.com/greeneyedtengu/statuses/sdfsdfsd"/>
     <category term="cat"/>
     <category term="dog"/>
+    <georss:point>37.4934592 -120.8473432</georss:point>
   </activity:object>
   <author>
     <name>greeneyedtengu</name>
