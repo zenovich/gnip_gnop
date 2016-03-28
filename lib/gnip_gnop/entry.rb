@@ -8,9 +8,9 @@ module GnipGnop
     register_namespace(DEFAULT_NS, "http://www.w3.org/2005/Atom")
     register_namespace("activity", "http://activitystrea.ms/spec/1.0/")
     register_namespace("service", "http://activitystrea.ms/service-provider")
-    register_namespace("gnip", "http://www.gnip.com/schemas/2010")
     register_namespace("thr", "http://purl.org/syndication/thread/1.0")
     register_namespace("georss", "http://www.georss.org/georss")
+    register_namespace("gnip", "http://www.gnip.com/schemas/2010")
     register_namespace("atommedia", "http://purl.org/syndication/atommedia")
 
     element :id, String
