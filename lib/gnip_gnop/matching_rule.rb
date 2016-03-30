@@ -7,6 +7,6 @@ module GnipGnop
     namespace "gnip"
 
     attribute :rel, String
-    content :rule
+    content :rule, String
   end
 end
